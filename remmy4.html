@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form onclick="return false">
+    <input type="text" name="scrn" id="scrn" >
+    <br>
+    <button onclick="values('1')">1</button>
+    <button onclick="values('2')">2</button>
+    <button onclick="values('+')">+</button>
+    <button onclick="equal()">=</button>
+    <button onclick="delet()">c</button>
+  </form>
+  <script>
+    function values(value) {
+      document.getElementById('scrn').value+=value;
+    }
+    function equal() {
+      var answer=document.getElementById('scrn').value;
+      var result=eval(answer);
+      document.getElementById('scrn').value=result; }
+
+      function delet() {
+       document.getElementById('scrn').value=""; 
+      }
+   
+  </script>
+</body>
+</html>
